@@ -17,12 +17,13 @@ if (-not $?) { exit 1 }
 $projects = 
   "src\Microsoft.Azure.WebJobs\WebJobs.csproj",
   "src\Microsoft.Azure.WebJobs.Host\WebJobs.Host.csproj",
+  "src\Microsoft.Azure.WebJobs.Host\WebJobs.Host.Source.csproj",
   "src\Microsoft.Azure.WebJobs.Logging\WebJobs.Logging.csproj",
   "src\Microsoft.Azure.WebJobs.Logging.ApplicationInsights\WebJobs.Logging.ApplicationInsights.csproj",
   "src\Microsoft.Azure.WebJobs.Extensions.EventHubs\WebJobs.Extensions.EventHubs.csproj",
-  "src\Microsoft.Azure.WebJobs.Extensions.ServiceBus\WebJobs.Extensions.ServiceBus.csproj",
   "src\Microsoft.Azure.WebJobs.Extensions.Storage\WebJobs.Extensions.Storage.csproj",
-  "src\Microsoft.Azure.WebJobs.Host.Storage\WebJobs.Host.Storage.csproj"
+  "src\Microsoft.Azure.WebJobs.Host.Storage\WebJobs.Host.Storage.csproj",
+  "src\Microsoft.Azure.WebJobs.Host.TestCommon\WebJobs.Host.Storage.csproj"
 
 foreach ($project in $projects)
 {

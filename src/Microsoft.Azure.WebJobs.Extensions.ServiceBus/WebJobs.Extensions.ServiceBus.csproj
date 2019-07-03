@@ -1,6 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="..\Microsoft.Azure.WebJobs.Shared\WebJobs.Shared.projitems" Label="Shared" />
   <Import Project="..\..\build\common.props" />  
   
   <PropertyGroup>
@@ -25,6 +24,10 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Azure.ServiceBus" Version="3.0.2" />
+    <PackageReference Include="Microsoft.Azure.WebJobs" Version="3.0.10" />
+    <PackageReference Include="Microsoft.Azure.WebJobs.Source" Version="3.0.10" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="2.2.0" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta004">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
@@ -32,22 +35,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="..\Microsoft.Azure.WebJobs.Host\Converters\AsyncConverter.cs" Link="Converters\AsyncConverter.cs" />
-    <Compile Include="..\Microsoft.Azure.WebJobs.Host\Converters\CompositeObjectToTypeConverter.cs" Link="Converters\CompositeObjectToTypeConverter.cs" />
-    <Compile Include="..\Microsoft.Azure.WebJobs.Host\Converters\ConversionResult.cs" Link="Converters\ConversionResult.cs" />
-    <Compile Include="..\Microsoft.Azure.WebJobs.Host\Converters\IAsyncObjectToTypeConverter.cs" Link="Converters\IAsyncObjectToTypeConverter.cs" />
-    <Compile Include="..\Microsoft.Azure.WebJobs.Host\Converters\IdentityConverter.cs" Link="Converters\IdentityConverter.cs" />
-    <Compile Include="..\Microsoft.Azure.WebJobs.Host\Converters\IObjectToTypeConverter.cs" Link="Converters\IObjectToTypeConverter.cs" />
-    <Compile Include="..\Microsoft.Azure.WebJobs.Host\Triggers\ITriggerDataArgumentBinding.cs" Link="Triggers\ITriggerDataArgumentBinding.cs" />
-    <Compile Include="..\Microsoft.Azure.WebJobs.Host\TypeUtility.cs" Link="TypeUtility.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <AdditionalFiles Include="..\..\stylecop.json" Link="stylecop.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Microsoft.Azure.WebJobs.Host\WebJobs.Host.csproj" />
   </ItemGroup>
 
 </Project>
